@@ -1,0 +1,258 @@
+
+        :root {
+            --primary: #6a11cb;
+            --secondary: #2575fc;
+            --accent: #ff4e50;
+            --dark: #121212;
+            --light: #f8f9fa;
+            --text: #333333;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, var(--dark), #1a1a2e);
+            color: var(--light);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .navbar {
+            background: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(106, 17, 203, 0.3);
+            padding: 15px 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: var(--light);
+            text-shadow: 0 0 10px rgba(106, 17, 203, 0.7);
+        }
+        
+        .navbar-brand span {
+            color: var(--accent);
+        }
+        
+        .nav-link {
+            color: var(--light) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .nav-link.active {
+            color: var(--accent) !important;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(106, 17, 203, 0.5);
+            background: linear-gradient(to right, var(--primary), #2d83ff);
+        }
+        
+        .btn-outline-light:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            font-weight: 800;
+            text-align: center;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        footer {
+            background: #0c0c0c;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-icon:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        /* Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        .glow {
+            text-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
+        }
+        
+        .page-content {
+            padding: 100px 0;
+            min-height: 70vh;
+        }
+        
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .disclaimer-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .disclaimer-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .disclaimer-list li:before {
+            content: "•";
+            color: var(--accent);
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: -3px;
+        }
+        
+        .last-updated {
+            font-style: italic;
+            color: #aaa;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 3rem 0 1.5rem;
+            color: #f8f9fa;
+        }
+        
+        footer h4, footer h5 {
+            font-weight: 700;
+            color: #fff;
+        }
+        
+        footer a {
+            color: #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: #6a11cb;
+            text-decoration: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            margin-right: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .about-section {
+            background: #0f0f1e;
+            padding: 4rem 0;
+            color: #e9ecef;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-notice {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 4px solid #6a11cb;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }

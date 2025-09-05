@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en" data-site="wizzleplay" data-page="terms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - WizzlePlay Social Entertainment Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3a0ca3;
+            --accent-color: #f72585;
+            --dark-bg: #0b1321;
+            --card-bg: #172033;
+            --text-light: #e6e9f0;
+            --text-muted: #8c94b5;
+            --gradient: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, #b5179e 100%);
+            --header-height: 80px;
+        }
+        
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        
+        /* Unique Header Design */
+        .header-wizzle {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background: rgba(11, 19, 33, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(67, 97, 238, 0.2);
+            padding: 0 2rem;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo-wizzle {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+        
+        .logo-wizzle span {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-left: 0.5rem;
+        }
+        
+        .logo-icon {
+            background: var(--gradient);
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .nav-wizzle {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-link-wizzle {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link-wizzle:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+        
+        .nav-link-wizzle:hover {
+            color: var(--accent-color);
+        }
+        
+        .nav-link-wizzle:hover:after {
+            width: 100%;
+        }
+        
+        .nav-link-wizzle.active {
+            color: var(--accent-color);
+        }
+        
+        .nav-link-wizzle.active:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Buttons */
+        .btn-primary-wizzle {
+            background: var(--gradient);
+            border: none;
+            border-radius: 50px;
+            padding: 14px 32px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-primary-wizzle:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(67, 97, 238, 0.4);
+        }
+        
+        .btn-accent-wizzle {
+            background: var(--gradient-accent);
+            border: none;
+            border-radius: 50px;
+            padding: 14px 32px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(247, 37, 133, 0.3);
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-accent-wizzle:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(247, 37, 133, 0.4);
+        }
+        
+        .btn-outline-light-wizzle {
+            border-radius: 50px;
+            padding: 14px 32px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--text-light);
+            color: var(--text-light);
+            background: transparent;
+        }
+        
+        .btn-outline-light-wizzle:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        /* Hero Section */
+        .hero-wizzle {
+            padding: calc(var(--header-height) + 40px) 0 60px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(11, 19, 33, 0.9) 0%, rgba(23, 32, 51, 0.8) 100%);
+        }
+        
+        .hero-content-wizzle h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .text-gradient-wizzle {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .text-accent-wizzle {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Content Cards */
+        .content-card-wizzle {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .content-card-wizzle:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient);
+        }
+        
+        .content-card-wizzle:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        
+        .disclaimer-card {
+            margin-bottom: 2rem;
+        }
+        
+        .disclaimer-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+        
+        .disclaimer-section {
+            margin-bottom: 3rem;
+        }
+        
+        .disclaimer-section h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .disclaimer-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .disclaimer-list li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .disclaimer-list li:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        
+        .important-note {
+            background: rgba(247, 37, 133, 0.1);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        /* Section Titles */
+        .section-title-wizzle {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .section-title-wizzle:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+        
+        /* FAQ Section */
+        .faq-section-wizzle {
+            background: linear-gradient(to bottom, var(--dark-bg) 0%, #080c14 100%);
+            padding: 5rem 0;
+        }
+        
+        .accordion-item-wizzle {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px !important;
+            margin-bottom: 1.2rem;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accordion-button-wizzle {
+            background-color: var(--card-bg);
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 1.5rem;
+            border: none;
+            box-shadow: none;
+        }
+        
+        .accordion-button-wizzle:not(.collapsed) {
+            background-color: rgba(67, 97, 238, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .accordion-button-wizzle:after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234361ee'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+            transform: scale(1.5);
+        }
+        
+        .accordion-button-wizzle:not(.collapsed):after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234361ee'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+        }
+        
+        .accordion-body-wizzle {
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        /* Unique Footer Design */
+        .footer-wizzle {
+            background: linear-gradient(135deg, #080c14 0%, #0b101b 100%);
+            padding: 4rem 0 2rem;
+            color: var(--text-light);
+            position: relative;
+            border-top: 1px solid rgba(67, 97, 238, 0.2);
+        }
+        
+        .footer-wizzle:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--gradient);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo span {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .footer-tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .footer-notice {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            text-align: left;
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .footer-legal {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .footer-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .copyright-wizzle {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            color: var(--text-muted);
+        }
+        
+        .responsible-entertainment {
+            margin-top: 2rem;
+        }
+        
+        .responsible-entertainment h5 {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        .responsible-logos {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .responsible-logos img {
+            max-height: 30px;
+            border-radius: 5px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero-content-wizzle h1 {
+                font-size: 2.8rem;
+            }
+            
+            .nav-wizzle {
+                display: none;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                background: var(--dark-bg);
+                flex-direction: column;
+                padding: 1rem 0;
+                border-top: 1px solid rgba(67, 97, 238, 0.2);
+            }
+            
+            .nav-wizzle.active {
+                display: flex;
+            }
+            
+            .nav-link-wizzle {
+                padding: 1rem 2rem;
+                width: 100%;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content-wizzle h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title-wizzle {
+                font-size: 2.2rem;
+            }
+            
+            .content-card-wizzle {
+                margin-bottom: 1.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style> <!-- Reuse same CSS from disclaimer -->
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header-wizzle">
+        <div class="header-container">
+            <a href="index.html" class="logo-wizzle">
+                <div class="logo-icon"><i class="fas fa-dice-d20"></i></div>
+                Wizzle<span>Play</span>
+            </a>
+            <nav class="nav-wizzle">
+                <a href="index.html" class="nav-link-wizzle">Home</a>
+                <a href="play.html" class="nav-link-wizzle">Entertainment</a>
+                <a href="disclaimer.html" class="nav-link-wizzle">Disclaimer</a>
+                <a href="terms.html" class="nav-link-wizzle active">Terms</a>
+                <a href="privacy.html" class="nav-link-wizzle">Privacy</a>
+            </nav>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Terms Hero -->
+    <section class="hero-wizzle">
+        <div class="container hero-content-wizzle">
+            <div class="row align-items-center">
+                <div class="col-lg-12 text-center">
+                    <h1 class="display-4 fw-bold mb-4">Terms & <span class="text-accent-wizzle">Conditions</span></h1>
+                    <p class="lead mb-4">Understand the rules and guidelines for using WizzlePlay responsibly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="content-card-wizzle disclaimer-card">
+                        <div class="text-center">
+                            <div class="disclaimer-icon"><i class="fas fa-file-contract"></i></div>
+                            <h2 class="text-accent-wizzle">Our Terms of Use</h2>
+                            <p class="mb-4">These Terms & Conditions govern your use of WizzlePlay's services and content.</p>
+                        </div>
+
+                        <div class="disclaimer-section">
+                            <h3>Acceptance of Terms</h3>
+                            <p>By accessing or using WizzlePlay, you acknowledge and agree to be bound by these Terms & Conditions and our Privacy Policy.</p>
+                        </div>
+
+                        <div class="disclaimer-section">
+                            <h3>Eligibility</h3>
+                            <p>WizzlePlay is designed for users aged 13 and above. If you are under 13, you may only use the platform under parental or guardian supervision.</p>
+                        </div>
+
+                        <div class="disclaimer-section">
+                            <h3>Use of Content</h3>
+                            <p>All games, graphics, and entertainment materials on WizzlePlay are for personal, non-commercial enjoyment only.</p>
+                            <ul class="disclaimer-list">
+                                <li>No redistribution of platform content</li>
+                                <li>No reverse engineering or unlawful usage</li>
+                                <li>No exploitation of software vulnerabilities</li>
+                            </ul>
+                        </div>
+
+                        <div class="disclaimer-section">
+                            <h3>User Responsibilities</h3>
+                            <p>Users must not engage in disruptive, harmful, or fraudulent activities while using WizzlePlay services.</p>
+                        </div>
+
+                        <div class="disclaimer-section">
+                            <h3>Limitation of Liability</h3>
+                            <p>WizzlePlay provides entertainment content “as is” without guarantees. We are not liable for any losses resulting from use or inability to access our platform.</p>
+                        </div>
+
+                        <div class="disclaimer-section">
+                            <h3>Account Termination</h3>
+                            <p>We reserve the right to suspend or terminate accounts that violate our Terms & Conditions or engage in prohibited activities.</p>
+                        </div>
+
+                        <div class="disclaimer-section">
+                            <h3>Changes to Terms</h3>
+                            <p>WizzlePlay may update these Terms periodically. Continued use after updates implies acceptance of revised Terms.</p>
+                        </div>
+
+                        <div class="disclaimer-section">
+                            <h3>Governing Law</h3>
+                            <p>These Terms & Conditions shall be governed by applicable laws in your jurisdiction without regard to conflict of law principles.</p>
+                        </div>
+
+                        <div class="disclaimer-section">
+                            <h3>Contact Information</h3>
+                            <p>If you have questions regarding these Terms, please reach out via our official contact page.</p>
+                        </div>
+
+                        <div class="important-note">
+                            <p><strong>Last Updated:</strong> January 1, 2025</p>
+                            <p class="mb-0">By continuing to use WizzlePlay, you confirm you have read, understood, and agreed to these Terms & Conditions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   <footer class="footer-wizzle">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    Wizzle<span>Play</span>
+                </div>
+                <p class="footer-tagline">
+                    The premier destination for interactive social entertainment. Enjoy responsibly for amusement only.
+                </p>
+
+                <div class="footer-notice">
+                    <p class="mb-0"><strong>Important Notice:</strong> This website's content is intended for individuals 18 years of age or older. WizzlePlay is a social platform providing free entertainment activities. No financial transactions occur—users cannot wager, win, or exchange real currency through activities.</p>
+                </div><br>
+
+                 <div class="mt-4">
+                        <h5 class="mb-3">Responsible Entertainment</h5>
+                        <div class="d-flex flex-wrap">
+                            <a href="https://www.gamblingtherapy.org/" target="_blank" class="me-3 mb-2">
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa' rx='5'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='10' fill='%23121212'>Gambling Therapy</text></svg>" alt="Gambling Therapy" class="img-fluid" style="max-height: 30px;">
+                            </a>
+                            <a href="https://www.gambleaware.org/" target="_blank" class="me-3 mb-2">
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa' rx='5'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='10' fill='%23121212'>GambleAware</text></svg>" alt="GambleAware" class="img-fluid" style="max-height: 30px;">
+                            </a>
+                            <a href="https://www.gamstop.co.uk/" target="_blank" class="me-3 mb-2">
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa' rx='5'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='10' fill='%23121212'>GamStop</text></svg>" alt="GamStop" class="img-fluid" style="max-height: 30px;">
+                            </a>
+                        </div>
+                    </div><br>
+                
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="play.html" class="footer-link">Entertainment</a>
+                    <a href="disclaimer.html" class="footer-link">Disclaimer</a>
+                    <a href="terms.html" class="footer-link">Terms & Conditions</a>
+                    <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                </div>
+                
+                <div class="footer-legal">
+                    <p class="copyright-wizzle">
+                        &copy; 2025 WizzlePlay. All rights reserved. This is a social entertainment website for enjoyment purposes only. No financial transactions are involved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-wizzle').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
